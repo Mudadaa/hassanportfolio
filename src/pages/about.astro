@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Hassan Layeb" description="About Hassan Layeb Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos"
+				tagline="Merci de passer par là. Ces quelques lignes vous donneront un aperçu de mon background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/hassanWorking3.jpg"
+					alt="Hassan Layeb at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Je suis né et j'ai grandi à Annecy en Haute-Savoie, plus précisément dans le quartier Marius Rulland. <br>
+					   Mes centres d'intérêts tournaient autour du ballon rond avec les autres enfants du quartier, de l'animation et des effets de mode des années 90: pog et kini, cartes à collectionner...
+					</p>
+						<p>Je visionnais beaucoup d'animés doublés en français à l'époque.
+						Par la suite d'autres sont venus s'ajouter à mon temps de visionnage mais en japonais sous-titré français.
+						C'est de là qu'un intérêt pour la langue japonaise est venu.</p>
+                         <br>
+						<p> Parlons un peu de mes hobbies du moment ! </p>
+						<p>J'apprécie les espaces de détente et je cours de temps en temps pour garder la forme. 
+						Après cela j'aime diversifier avec quelques exercices de cardio. Toujours pour décrasser la machine, 
+						je kiffe aller nager au lac et incroyabe je ne rouille pas ! (vanne de qualidad). 
+						Depuis peu j'ai repris la musculation, et ça fait du bien !
+					   </p> 
+					   <p>Retour sur de l'audiovisuel avec ma passion des jeux-vidéos ! Un peu, un noob sur "les shoot-them-up" ou les RPG même si je m'accroche,
+						 je prends tarif sur les sools-like. Par contre, je me défends mieux sur la franchise Nintendo.
+						  Les jeux Nintendo sont inventifs et amusants ! Vous l'aurez compris je suis un casual gamer! Je me fais plaisir mais je veux éviter d'être aigri par trop de défaites sur Lol. </p>
+					</p>
+					
+					
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Éducation</h2>
+				<div class="content">
+					<p>Pour mon éducation du plus récent au plus ancien, j'ai suivi la formation Développeur Web JavaScript Full Stack avec l'École O'Clock en téléprésentiel.</p>
+					<p>Les cours étaient animés par des Développeurs.</p>
+					<p>J'ai effectué une Licence de Langues Étrangères Appliquées , LEA Anglais-Japonais à l'Université Grenoble Alpes. </p>
+					<p> Avant cela, j'ai passé mon Baccalauréat Scientifique au Lycée Berthollet d'Annecy</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Soft Skills</h2>
+				<div class="content">
+					<p>La Communication lors de pair programming avec les collègues.</p>
+					<p>L'Empathie pour comprendre les problématiques rencontrées par autrui et s'adapter.</p>
+					<p>J'ai des envies créatives de montage et de recherches d'effets visuels par moments, je l'avoue, je l'avoue.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Hard Skills</h2>
+				<div class="content">
+					<p>Pour le Backend, j'utilise les requêtes SQL via un client postgres pour la récupération des informations stockées en base de données (Db->client pg->dataMapper) et JavaScript pour le reste des acteurs (controllers) qui vont envoyer le tout au Front.</p>
+					<p>En Frontend j'utilise JS Vanilla pour la manipulation du DOM.</p>
+					<p>Je suis en apprentissage de React, Redux pour le Front.</p>
+					<br>
+					<p>Pour mon côté créatif, j'aime utiliser des logiciels de la suite Adobe: Premiere Pro, Photoshop, Indesign. Si possible j'implémente mes créations dans mes projets Web.
+					Et ça ça n'a pas de prix car double dose créative ! </p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
