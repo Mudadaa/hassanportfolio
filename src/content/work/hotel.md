@@ -8,6 +8,7 @@ description: |
 tags:
   - Design
   - Site vitrine statique
+  - Mobile + Desktop
 ---
 
 https://mudadaa.github.io/h-tel/

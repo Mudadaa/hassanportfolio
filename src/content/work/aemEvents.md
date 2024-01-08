@@ -8,6 +8,7 @@ tags:
   - Dev
   - Branding
   - Évènementiel
+  - Mobile + Desktop
 ---
 
 https://mudadaa.github.io/amevents/index.html

@@ -12,6 +12,7 @@ tags:
   - Adobe design
   - Animation
   - Site Dynamique
+  - Desktop
 ---
 
 https://barbatosecundo-b9cb252557e7.herokuapp.com/
